@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="hotels-page">
+        <section class="search-and-filter">
+            <div class="first-row">
+                <div class="first-col">
+                    <span class="fa fa-search"></span>
+                    <input id="searchText" type="text" placeholder="Champs Elysees, Paris" autocomplete="on" />
+                </div>
+                <div class="second-col">
+                    <input type="submit" value="Search" id="submit-btn" />
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="col first-col">
+                    <i class="fa fa-calendar-o"></i>
+                    <input id="checkInDate" placeholder="Check-in" />
+                </div>
+                <div class="col second-col">
+                    <i class="fa fa-calendar-o"></i>
+                    <input id="checkOutDate" placeholder="Check-out" />
+                </div>
+                <div class="col">
+                    <i class="fa fa-users"></i>
+                    <select>
+                        <option value="Single">Single</option>
+                        <option value="Double">Double</option>
+                        <option value="Family rooms" selected>Family rooms</option>
+                    </select>
+                </div>
+            </div>
+            <div class="third-row" id="filter-container">
+                <div class="col first-col">
+                    <div class="label">
+                        <span>Price</span>
+                        <span id="max-price" class="max-price"></span>
+                    </div>
+                    <input id="price-range" type="range" min="" max="" value="" />
+                </div>
+                <div class="col">
+                    <div class="label">
+                        Property type
+                    </div>
+                    <select id="hotel-star-select">
+                        <option value="0" selected>All</option>
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="label">
+                        Guest rating
+                    </div>
+                    <select id="hotel-rating-select">
+                        <option value="All" selected>All</option>
+                        <option value="0-2">0 - 2 Okay</option>
+                        <option value="2-6">2 - 6 Fair</option>
+                        <option value="6-7">6 - 7 Good</option>
+                        <option value="7-8.5">7 - 8.5 Very Good</option>
+                        <option value="8.5-10">8.5 - 10 Excellent</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="label">
+                        Hotel location
+                    </div>
+                    <select id="hotel-locations-select">
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="label">
+                        More filters
+                    </div>
+                    <select id="hotel-filters-select">
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="map-and-sort">
+            <div class="map" style="">
+                <div id="btn-view-map" style="width:60%;height:60%;background-color:white;text-align:center;">View Map</div>
+            </div>
+            <div class="sorting" id="sorting">
+                <strong>Sort By</strong>
+                <select>
+                    <option value="">Our Recommendations</option>
+                    <option value="Hotel name">Hotel Name</option>
+                    <option value="City">City</option>
+                    <option value="Price">Price</option>
+                </select>
+                <span class="info-icon">i</span>
+            </div>
+        </section>
+        <section class="listing-hotels">
+        </section>
+        <div class="modal modal-map" id="mapModal">
+            <span class="close">&times;</span>
+            <iframe class="modal-content" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83998.94722687619!2d2.277019841665155!3d48.8588377391234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgr!4v1554987763683!5m2!1sen!2sgr"></iframe>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.5.1.js"></script>
+    <script src="js/myScripts.js"></script>
+</body>
+</html>
